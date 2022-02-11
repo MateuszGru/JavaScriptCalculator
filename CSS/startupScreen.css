@@ -34,6 +34,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -42,9 +44,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .numbersContainer, .operationsContainer {
@@ -64,6 +66,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 30px;
 }
 
 .numbersContainer h3, .operationsContainer h3 {
@@ -87,7 +90,8 @@ button {
   gap: 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 280px;
+  width: 100%;
+  padding: 0 50px;
   height: 360px;
   margin: 0 auto 0 auto;
   overflow: auto;
@@ -96,9 +100,13 @@ button {
 .singleButtonsStyle {
   border: 1px solid black;
   border-radius: 4px;
-  width: 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 60px;
+  padding: 15px;
   height: 60px;
-  font-size: 30px;
+  font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,16 +129,21 @@ button {
   color: white;
 }
 
-#checkAllNumbers {
+.checkAllBtn {
   height: 45px;
   border: none;
   background-color: #555454;
   color: white;
 }
 
-#checkAllNumbers:hover {
+.checkAllBtn:hover {
   color: black;
   background-color: #f3f3f3;
   border-top: 1px solid #555454;
+}
+
+.removeSelectionFromSingleButtonsStyle {
+  background-color: #555454;
+  color: white;
 }
 /*# sourceMappingURL=startupScreen.css.map */

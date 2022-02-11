@@ -1,15 +1,27 @@
 const checkAllNumbers = document.querySelector('#checkAllNumbers')
 const userTextContentQuantity = 10
 
-function checkAllButtons(){
-    let singleButtonStyle = document.querySelectorAll('.singleButtonsStyle')
-    for(let i=0; i<10; i++){
-        singleButtonStyle[i].style.backgroundColor = 'rgb(85, 84, 84)'
-        singleButtonStyle[i].style.color = 'white'
-    }
+
+// function checkAllButtons(){
+//     for(let i=0; i<userTextContentQuantity; i++){
+//         let singleButtonStyle = document.querySelector(`#singleButtonNum${i}`)
+//         singleButtonStyle.classList.toggle('removeSelectionFromSingleButtonsStyle')
+//     }
+//     if(singleButtonStyle.classList[1] == 'removeSelectionFromSingleButtonsStyle'){
+//         checkAllNumbers.textContent = 'Odznacz wszystkie'
+//     }else{
+//         checkAllNumbers.textContent = 'Zaznacz wszystkie'
+//     }
+// }
+
+// checkAllNumbers.addEventListener('click', function(){
+//     checkAllButtons()
+// })
+function returnClickedItem(e){
+    console.log(e.target);
 }
 
-checkAllNumbers.addEventListener('click', checkAllButtons)
+document.querySelector('#fillNumbers').addEventListener('click', returnClickedItem)
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -24,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let fillNumbers = new fillStartupScreenData(
         targetLocation = document.querySelector('#fillOperations'),
-        userTextContent = ['+', "-", '*', '/', '^', "!"]
+        userTextContent = ['Dodawanie ( + )', "Odejmowanie ( - )", 'Mnożenie ( * )', 'Dzielenie ( / )', 'Potęgowanie ( ^ )', "Silnia ( ! )"]
     )
     fillNumbers.createDataSourceBasedOnArray()
 })
