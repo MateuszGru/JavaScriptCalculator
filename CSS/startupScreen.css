@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+  min-height: 100vh;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.startupScreenNumberPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1000px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.numbersContainer, .operationsContainer {
+  border: 1px solid black;
+  height: 540px;
+  max-width: 430px;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.numbersContainer h3, .operationsContainer h3 {
+  padding: 30px 30px 0 30px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 280px;
+  height: 360px;
+  margin: 0 auto 0 auto;
+  overflow: auto;
+}
+
+.singleButtonsStyle {
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.singleButtonsStyle:hover {
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+  background-color: #555454;
+  color: white;
+}
+
+#checkAllNumbers {
+  height: 45px;
+  border: none;
+  background-color: #555454;
+  color: white;
+}
+
+#checkAllNumbers:hover {
+  color: black;
+  background-color: #f3f3f3;
+  border-top: 1px solid #555454;
+}
+/*# sourceMappingURL=startupScreen.css.map */
