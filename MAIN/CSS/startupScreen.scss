@@ -8,6 +8,7 @@
 
 body{
     background-color: rgb(243, 243, 243);
+    user-select: none;
 }
 
 button{
@@ -75,8 +76,6 @@ button{
     transition: box-shadow .2s;
     &:hover{
         box-shadow: 0px 2px 5px rgb(85, 84, 84);
-        background-color: rgb(85, 84, 84);
-        color: white;
     }
 }
 
@@ -92,10 +91,89 @@ button{
     }
 }
 
-.removeSelectionFromSingleButtonsStyle{
-    background-color: rgb(85, 84, 84);
-    color: white;
+.nextButton{
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid black;
+    transition: box-shadow .2s;
+    &:hover{
+        box-shadow: 0px 2px 5px rgb(85, 84, 84);
+    }
 }
 
+.infoPopup{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(243, 243, 243);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 0px 2px 5px rgb(85, 84, 84);
+    animation: popup 1s ease-in-out;
+    z-index: 100000;
+    .infoPopupParagraph{
+        height: 45px;
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        overflow: auto;
+    }
+    .InfoPopupButton{
+        margin-top: 20px;
+        width: 120px;
+        height: 40px;
+        border: 1px solid black;
+        transition: box-shadow .2s;
+        &:hover{
+            box-shadow: 0px 2px 5px rgb(85, 84, 84);
+        }
+    }
+}
 
+.addSelectionFromSingleButtonsStyle{
+    background-color: rgb(85, 84, 84);
+    color: white;
+    animation: clickAndSelectSingleButton 0.1s ease-in-out;
+}
+
+.removeSelectionFromSingleButtonsStyle{
+    color: black;
+    background-color: rgb(243, 243, 243);
+    animation: clickAndRemoveSelectSingleButton 0.1s ease-in-out;
+}
+
+@keyframes popup {
+    0%{
+        opacity: 0;
+        transform: translate(-50%,-100%);
+    }
+    40%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+}
+@keyframes clickAndSelectSingleButton{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.95); 
+    }
+}
+@keyframes clickAndRemoveSelectSingleButton{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.95); 
+    }
+}
 
