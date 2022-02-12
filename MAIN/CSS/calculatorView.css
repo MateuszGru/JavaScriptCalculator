@@ -1,0 +1,111 @@
+.wrapperCalculatorView {
+  display: none;
+}
+
+.clearButton {
+  width: 100%;
+}
+
+.CE {
+  margin: 40px 0 0 60px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+  padding: 15px;
+  height: 60px;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.CE:hover {
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+}
+
+.calculatorViewContainer {
+  border: 1px solid black;
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+  width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 550px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.calculatorViewContainer .calculatorScreen {
+  border-bottom: 1px solid black;
+  background-color: #555454;
+  font-size: 25px;
+  padding-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 90px;
+  color: white;
+  margin: 0 auto;
+}
+
+.calculatorViewContainer .calculatorButtons {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.calculatorViewContainer .calculatorButtons #numberButtons {
+  width: 400px;
+  height: 260px;
+  padding-right: 0;
+  margin: 0;
+}
+
+.calculatorViewContainer .calculatorButtons #operationButtons {
+  width: 300px;
+  height: 260px;
+  margin: 0;
+}
+/*# sourceMappingURL=calculatorView.css.map */

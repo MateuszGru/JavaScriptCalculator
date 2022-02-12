@@ -1,4 +1,8 @@
 const userTextContentQuantity = 10
+let selectedButtons = {
+    selectedNumbers: [],
+    selectedOperations: []
+}
 
 // checking all options (numbers and math operations) using one check all button
 function checkAllButtons(e){
@@ -10,11 +14,11 @@ function checkAllButtons(e){
             childNodesOfFillOperations.childNodes[i].classList.remove('removeSelectionFromSingleButtonsStyle')
             e.target.textContent = 'Odznacz wszystkie'
             if(e.target.id == 'checkAllOperations'){
-                document.querySelector('.wrapper').style.display = 'none'
+                document.querySelector('.wrapperStartupScreen').style.display = 'none'
                 document.querySelector('.infoPopup').style.display = 'flex'
                 document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania potęgi lub silni, kalkulator nie obsługuje liczb innych niż naturalne'
             }else{
-                document.querySelector('.wrapper').style.display = 'flex'
+                document.querySelector('.wrapperStartupScreen').style.display = 'flex'
                 document.querySelector('.infoPopup').style.display = 'none'
                 document.querySelector('.infoPopupParagraph').textContent = ''
             }
@@ -38,17 +42,38 @@ function stylingSelectedItem(e){
             e.target.classList.add('addSelectionFromSingleButtonsStyle')
             e.target.classList.remove('removeSelectionFromSingleButtonsStyle')
             if(e.target.textContent == 'Potęgowanie ( ^ )'){
-                document.querySelector('.wrapper').style.display = 'none'
+                document.querySelector('.wrapperStartupScreen').style.display = 'none'
                 document.querySelector('.infoPopup').style.display = 'flex'
                 document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania potęgi, kalkulator nie obsługuje liczb innych niż naturalne'
             }else if(e.target.textContent == 'Silnia ( ! )'){
-                document.querySelector('.wrapper').style.display = 'none'
+                document.querySelector('.wrapperStartupScreen').style.display = 'none'
                 document.querySelector('.infoPopup').style.display = 'flex'
                 document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania silni, kalkulator nie obsługuje liczb innych niż naturalne'   
             }
         }
     } 
 }
+
+// grouping selected values (options) into one object
+function groupingSelectedElements (){
+    let allNumbers = document.querySelectorAll('#fillNumbers .singleButtonsStyle')
+    let allOperations = document.querySelectorAll('#fillOperations .singleButtonsStyle')
+    for(let i=0; i<allNumbers.length ;i++){
+        if(allNumbers[i].classList.contains('addSelectionFromSingleButtonsStyle')){
+            selectedButtons.selectedNumbers.push(allNumbers[i].textContent)
+        }
+    }
+    for(let i=0; i<allOperations.length ;i++){
+        if(allOperations[i].classList.contains('addSelectionFromSingleButtonsStyle')){
+            selectedButtons.selectedOperations.push(allOperations[i].textContent)
+        }
+    }
+    document.querySelector('.wrapperStartupScreen').style.display = 'none'
+    document.querySelector('.wrapperCalculatorView').style.display = 'flex'
+}
+
+// listener next button to group every options into one object after click
+document.querySelector('.nextButton').addEventListener('click', groupingSelectedElements)
 
 // listener check all button
 document.querySelector('#checkAllNumbers').addEventListener('click', checkAllButtons)

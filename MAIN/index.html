@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" href="./CSS/startupScreen.css">
+    <link rel="stylesheet" href="./CSS/calculatorView.css">
 </head>
 <body>
     <main>
-        <div class="wrapper">
+        <div class="wrapperStartupScreen wrapper">
             <div class="startupScreenNumberPanel">
                 <div class="numbersContainer">
                     <h3>Wybierz Cyfry z których chesz skorzystać:</h3>
@@ -24,12 +25,25 @@
                     <button class="nextButton">dalej >></button>
             </div>
         </div>
+        <div class="wrapperCalculatorView wrapper">
+            <div class="calculatorViewContainer">
+                <div class="calculatorScreen">1+2</div>
+                <div class="clearButton">
+                    <button class="CE">CE</button>
+                </div>
+                <div class="calculatorButtons">
+                    <div id="numberButtons" class="content"></div>
+                    <div id="operationButtons" class="content"></div>
+                </div>
+            </div>
+        </div>
         <div class="infoPopup">
             <p class="infoPopupParagraph"></p>
             <button class="InfoPopupButton">OK</button>
         </div>
     </main>
-    <script src="./JS/js.js"></script>
+    <script src="./JS/startupScreen.js"></script>
+    <script src="./JS/calculatorView.js"></script>
     <script src="./JS/fillStartupScreenClass.js"></script>
 </body>
 </html>
