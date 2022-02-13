@@ -307,3 +307,10 @@ button {
             transform: scale(0.95);
   }
 }
+
+@media screen and (max-width: 981px) {
+  .startupScreenNumberPanel{
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}

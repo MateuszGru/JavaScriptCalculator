@@ -121,7 +121,7 @@ a {
   border: 1px solid black;
   -webkit-box-shadow: 0px 2px 5px #555454;
           box-shadow: 0px 2px 5px #555454;
-  width: 810px;
+  width: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,7 +193,7 @@ a {
 }
 
 .calculatorViewContainer .calculatorButtons #operationButtons {
-  width: 400px;
+  width: 350px;
   height: fit-content;
   margin: 0;
   -webkit-box-pack: flex-start;
