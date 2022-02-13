@@ -1,12 +1,61 @@
 .wrapperCalculatorView {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reload {
+  margin-top: 70px;
+  width: 120px;
+  height: 40px;
+  border: 1px solid black;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.reload:hover {
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: black;
 }
 
 .clearButton {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-.CE {
+.AC {
   margin: 40px 0 0 60px;
   border: 1px solid black;
   border-radius: 4px;
@@ -32,7 +81,38 @@
   transition: box-shadow .2s, -webkit-box-shadow .2s;
 }
 
-.CE:hover {
+.AC:hover {
+  -webkit-box-shadow: 0px 2px 5px #555454;
+          box-shadow: 0px 2px 5px #555454;
+}
+
+.equal {
+  margin: 40px 0 0 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+  padding: 15px;
+  height: 60px;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.equal:hover {
   -webkit-box-shadow: 0px 2px 5px #555454;
           box-shadow: 0px 2px 5px #555454;
 }
@@ -41,7 +121,7 @@
   border: 1px solid black;
   -webkit-box-shadow: 0px 2px 5px #555454;
           box-shadow: 0px 2px 5px #555454;
-  width: 700px;
+  width: 810px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,13 +142,18 @@
   border-bottom: 1px solid black;
   background-color: #555454;
   font-size: 25px;
-  padding-right: 40px;
+  padding: 0 30px;
+  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -104,8 +189,38 @@
 }
 
 .calculatorViewContainer .calculatorButtons #operationButtons {
-  width: 300px;
+  width: 400px;
   height: 260px;
   margin: 0;
+}
+
+.previousNum {
+  height: 30px;
+  width: 100%;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.currentNum {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=calculatorView.css.map */

@@ -14,12 +14,9 @@ function checkAllButtons(e){
             childNodesOfFillOperations.childNodes[i].classList.remove('removeSelectionFromSingleButtonsStyle')
             e.target.textContent = 'Odznacz wszystkie'
             if(e.target.id == 'checkAllOperations'){
-                document.querySelector('.wrapperStartupScreen').style.display = 'none'
-                document.querySelector('.infoPopup').style.display = 'flex'
-                document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania potęgi lub silni, kalkulator nie obsługuje liczb innych niż naturalne'
+                openPopup('Podczas wyliczania potęgi lub silni, kalkulator nie obsługuje liczb innych niż naturalne')
             }else{
-                document.querySelector('.wrapperStartupScreen').style.display = 'flex'
-                document.querySelector('.infoPopup').style.display = 'none'
+                document.querySelector('.bacgroundPopup').style.display = 'none'
                 document.querySelector('.infoPopupParagraph').textContent = ''
             }
         }
@@ -32,6 +29,11 @@ function checkAllButtons(e){
     }
 }
 
+function openPopup(text){
+    document.querySelector('.bacgroundPopup').style.display = 'block'
+    document.querySelector('.infoPopupParagraph').textContent = text
+}
+
 // checking single option (number or operation) by clicking on it
 function stylingSelectedItem(e){
     if(e.target.classList[0] == 'singleButtonsStyle'){
@@ -42,13 +44,9 @@ function stylingSelectedItem(e){
             e.target.classList.add('addSelectionFromSingleButtonsStyle')
             e.target.classList.remove('removeSelectionFromSingleButtonsStyle')
             if(e.target.textContent == 'Potęgowanie ( ^ )'){
-                document.querySelector('.wrapperStartupScreen').style.display = 'none'
-                document.querySelector('.infoPopup').style.display = 'flex'
-                document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania potęgi, kalkulator nie obsługuje liczb innych niż naturalne'
+                openPopup('Podczas wyliczania potęgi, kalkulator nie obsługuje liczb innych niż naturalne')
             }else if(e.target.textContent == 'Silnia ( ! )'){
-                document.querySelector('.wrapperStartupScreen').style.display = 'none'
-                document.querySelector('.infoPopup').style.display = 'flex'
-                document.querySelector('.infoPopupParagraph').textContent = 'Podczas wyliczania silni, kalkulator nie obsługuje liczb innych niż naturalne'   
+                openPopup('Podczas wyliczania silni, kalkulator nie obsługuje liczb innych niż naturalne' )
             }
         }
     } 
@@ -85,8 +83,7 @@ document.querySelector('#fillNumbers').addEventListener('click', stylingSelected
 
 // listener closing popup on press "OK" button
 document.querySelector('.InfoPopupButton').addEventListener('click', function(){
-    document.querySelector('.wrapper').style.display = 'flex'
-    document.querySelector('.infoPopup').style.display = 'none'
+    document.querySelector('.bacgroundPopup').style.display = 'none'
 })
 
 

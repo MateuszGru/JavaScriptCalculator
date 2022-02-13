@@ -27,19 +27,26 @@
         </div>
         <div class="wrapperCalculatorView wrapper">
             <div class="calculatorViewContainer">
-                <div class="calculatorScreen">1+2</div>
+                <div class="calculatorScreen">
+                    <div class="previousNum"></div>
+                    <div class="currentNum"></div>
+                </div>
                 <div class="clearButton">
-                    <button class="CE">CE</button>
+                    <button class="AC">AC</button>
+                    <button class="equal">=</button>
                 </div>
                 <div class="calculatorButtons">
                     <div id="numberButtons" class="content"></div>
                     <div id="operationButtons" class="content"></div>
                 </div>
             </div>
+            <button class="reload"><a href="index.html">Powrót</a></button>
         </div>
-        <div class="infoPopup">
-            <p class="infoPopupParagraph"></p>
-            <button class="InfoPopupButton">OK</button>
+        <div class="bacgroundPopup">
+            <div class="infoPopup">
+                <p class="infoPopupParagraph"></p>
+                <button class="InfoPopupButton">OK</button>
+            </div>
         </div>
     </main>
     <script src="./JS/startupScreen.js"></script>
