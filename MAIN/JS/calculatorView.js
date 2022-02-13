@@ -1,10 +1,10 @@
 const calcScreen = document.querySelector('.currentNum')
 const prevNum = document.querySelector('.previousNum')
-let operation
+let operation = undefined
 
 // display selected number on the calculator screen
 function displaySelectedOptionOnCalculatorScreen (selectedEl){
-    currentNumber = selectedEl.target.textContent
+    let currentNumber = selectedEl.target.textContent
     if(selectedEl.target.classList[0] == 'singleButtonsStyle'){
         if(currentNumber == '.'){
             if(calcScreen.textContent.includes('.')){
@@ -17,7 +17,7 @@ function displaySelectedOptionOnCalculatorScreen (selectedEl){
 
 // selecting and validate chosen operator displaing it on the screen
 function chooseOperation (operator){
-    operation = operator.target.textContent
+    
     if(operator.target.classList[0] == 'singleButtonsStyle'){
         if(calcScreen.textContent == ''){
             return
@@ -35,11 +35,12 @@ function chooseOperation (operator){
                     return
                 }
             }
+            operation = operator.target.textContent
             calculate()
-        }
-        if(operator.target.textContent != '!'){
-            prevNum.textContent = calcScreen.textContent + operator.target.textContent
-            calcScreen.textContent = ''
+            if(operator.target.textContent != '!'){
+                prevNum.textContent = calcScreen.textContent + ' ' + operator.target.textContent
+                calcScreen.textContent = ''
+            }
         }
     }
 }
@@ -68,15 +69,15 @@ function calculate(){
             for(let i=1; i<=curr; i++){
                 mathOperation *= i
             }
+            prevNum.textContent = `silnia(${calcScreen.textContent})`
             calcScreen.textContent = mathOperation
-            prevNum.textContent = ''
         }
         operation = undefined
     }
     if(isNaN(curr) || isNaN(prev)){
         return
     }
-    switch (operation){
+    switch (prevNum.textContent[prevNum.textContent.length -1]){
         case '+':
             mathOperation = prev + curr
             break;
@@ -119,12 +120,7 @@ document.querySelector('#operationButtons').addEventListener('click', chooseOper
 document.querySelector('#numberButtons').addEventListener('click', displaySelectedOptionOnCalculatorScreen)
 
 // clearing calculator Current Screen by press AC
-document.querySelector('.AC').addEventListener('click', function(){
-    calcScreen.textContent = ''
-})
-// clearin whole calculator screen
-document.querySelector('.AC').addEventListener('dblclick', clearCalc)
-
+document.querySelector('.CE').addEventListener('click', clearCalc)
 
 // building buttons in calculator view
 document.querySelector('.nextButton').addEventListener('click', function(){

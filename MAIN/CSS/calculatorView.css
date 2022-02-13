@@ -55,7 +55,7 @@ a {
           justify-content: flex-start;
 }
 
-.AC {
+.CE {
   margin: 40px 0 0 60px;
   border: 1px solid black;
   border-radius: 4px;
@@ -81,7 +81,7 @@ a {
   transition: box-shadow .2s, -webkit-box-shadow .2s;
 }
 
-.AC:hover {
+.CE:hover {
   -webkit-box-shadow: 0px 2px 5px #555454;
           box-shadow: 0px 2px 5px #555454;
 }
@@ -222,4 +222,69 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 818px) {
+  .calculatorViewContainer{
+    width: 430px;
+    height: 500px;
+  }
+  #numberButtons{
+    max-width: 250px;
+    min-height: 250px;
+    gap: 0;
+    justify-content: flex-start;
+    height: 180px!Important;
+    align-items: flex-start;
+  }
+  .singleButtonsStyle{
+    border-radius: 0;
+    margin: 1px;
+  }
+  .singleButtonsStyle:hover{
+    box-shadow: none;
+    background-color: #adadad2c;
+  }
+  .calculatorButtons{
+    min-height: 250px;
+  }
+  .CE{
+    margin-left: 50px;
+    min-width: 120px;
+    max-width: 120px;
+    border-radius: 0;
+  }
+  .equal{
+    margin-left: 2px;
+    min-width: 60px;
+    max-width: 60px;
+    border-radius: 0;
+  }
+  #operationButtons{
+    max-width: 180px;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+    height: 250px!Important;
+  }
+}
+@media screen and (max-width: 455px){
+  #operationButtons{
+    padding: 0;
+    max-width: 130px;
+  }
+  #numberButtons{
+    padding: 0;
+    max-width: 200px;
+    width: 200px;
+    padding-left: 5px;
+  }
+  .calculatorViewContainer{
+    width: 330px;
+  }
+  .CE{
+    margin-left: 5px;
+  }
 }
