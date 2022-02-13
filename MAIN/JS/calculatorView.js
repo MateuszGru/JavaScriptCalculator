@@ -15,7 +15,7 @@ function displaySelectedOptionOnCalculatorScreen (selectedEl){
     }
 }
 
-// selecting and validate chosen operator displaing it on the screen
+// selecting and validate chosen operator, display it on the screen
 function chooseOperation (operator){
     
     if(operator.target.classList[0] == 'singleButtonsStyle'){

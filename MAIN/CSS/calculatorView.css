@@ -56,7 +56,7 @@ a {
 }
 
 .CE {
-  margin: 40px 0 0 60px;
+  margin: 40px 0 0 50px;
   border: 1px solid black;
   border-radius: 4px;
   width: -webkit-fit-content;
@@ -166,6 +166,7 @@ a {
 .calculatorViewContainer .calculatorButtons {
   width: 100%;
   height: 300px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,9 +174,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -183,15 +184,21 @@ a {
 
 .calculatorViewContainer .calculatorButtons #numberButtons {
   width: 400px;
-  height: 260px;
+  height: fit-content;
   padding-right: 0;
   margin: 0;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
 }
 
 .calculatorViewContainer .calculatorButtons #operationButtons {
   width: 400px;
-  height: 260px;
+  height: fit-content;
   margin: 0;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
 }
 
 .previousNum {
@@ -232,10 +239,8 @@ a {
   }
   #numberButtons{
     max-width: 250px;
-    min-height: 250px;
     gap: 0;
     justify-content: flex-start;
-    height: 180px!Important;
     align-items: flex-start;
   }
   .singleButtonsStyle{
@@ -267,7 +272,6 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 0;
-    height: 250px!Important;
   }
 }
 @media screen and (max-width: 455px){

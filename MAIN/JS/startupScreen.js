@@ -29,6 +29,7 @@ function checkAllButtons(e){
     }
 }
 
+// showing info pupup 
 function openPopup(text){
     document.querySelector('.bacgroundPopup').style.display = 'block'
     document.querySelector('.infoPopupParagraph').textContent = text
@@ -85,7 +86,6 @@ document.querySelector('#fillNumbers').addEventListener('click', stylingSelected
 document.querySelector('.InfoPopupButton').addEventListener('click', function(){
     document.querySelector('.bacgroundPopup').style.display = 'none'
 })
-
 
 // calling fillStartupScreenClass. This class build buttons (options) and place them in correct containers on landing page.
 document.addEventListener('DOMContentLoaded', function(){
