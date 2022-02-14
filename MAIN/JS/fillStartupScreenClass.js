@@ -1,3 +1,4 @@
+// Documentation in readme File
 class fillStartupScreenData{
     constructor(targetLocation, userTextContent = 10 , nameElementID = 'singleButton'){
         this.targetLocation = targetLocation

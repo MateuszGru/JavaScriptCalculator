@@ -119,7 +119,7 @@ document.querySelector('#operationButtons').addEventListener('click', chooseOper
 // select numbers from 0-9
 document.querySelector('#numberButtons').addEventListener('click', displaySelectedOptionOnCalculatorScreen)
 
-// clearing calculator Current Screen by press AC
+// clearing calculator Screen by press AC
 document.querySelector('.CE').addEventListener('click', clearCalc)
 
 // building buttons in calculator view
